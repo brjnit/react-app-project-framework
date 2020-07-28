@@ -3,7 +3,7 @@ import {GET, POST} from './MethodType'
 import {API_URL} from '../../config'
 import APIResponseHelper from './APIResponseHelper'
 import {showLoadingIndicator, hideLoadingIndicator} from '../../redux/actions/LoadingActions'
-import store from '../../redux/store/ConfigureStore'
+//import store from '../../redux/store/ConfigureStore'
  
 export default class APIRequest {
     callAPI = async (apiName, inputParams, showLoading) =>{
