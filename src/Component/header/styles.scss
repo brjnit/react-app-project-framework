@@ -1,5 +1,31 @@
-.Header {
-    background: blue($color: #3fbbda);
-    height: 90px;
+
+header {
+    display: flex;  
     width: 100%;
-}
+    margin: 0 auto; 
+    height: 60px; 
+    padding: 0 20px;
+    background: #ced6e0;
+  
+    .wrap {
+      position: relative;
+      display: flex;  
+      margin: 0 auto;
+      color: white;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .button {
+      size: inherit;;
+      margin: 20px 10px;
+      background: transparent;
+     :hover {
+      background: transparent;
+     }
+     :disabled {
+      background: transparent;
+     }
+    }
+    
+  }

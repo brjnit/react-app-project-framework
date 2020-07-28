@@ -6,14 +6,17 @@ import './styles.scss'
 const Header = (props) => {
     const {title, isBack, emitEvent} = props
     const submitEvent = () => {
+        console.log("event triggered")
         emitEvent();
     }
     return(
-        <div className = "Header" onClick = {submitEvent} data-test="headerComponent">
+        <header  onClick = {submitEvent} data-test="headerComponent">
+            <div className = "button" onClick = {submitEvent}>
             {isBack ? <ArrowBack/> : <Menu/>
             }
-            {title}
-        </div>
+            </div>
+            <div className = "wrap">{title}</div>  
+        </header>
     )
 }
 Header.propTypes = {

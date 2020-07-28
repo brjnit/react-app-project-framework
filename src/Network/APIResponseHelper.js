@@ -1,9 +1,9 @@
 import { showLoadingIndicator, hideLoadingIndicator } from "../../redux/actions/LoadingActions";
-import store from '../../redux/store/ConfigureStore';
+import store from '../Redux/store/configStore';
 
 
 export default class APIResponseHelper {
-    parseResponse = async ( response) => {
+    parseResponse = async (response) => {
         
         let status = response.status;
         let dataAvailable = false;
@@ -27,7 +27,6 @@ export default class APIResponseHelper {
                     store.dispatch(hideLoadingIndicator());
             }
         }else{
-            //store.dispatch(showNotification('Error', 'Uh Oh, Something went wrong.', ' Please try again'))
             if(showLoadingIndicator)
                 store.dispatch(hideLoadingIndicator());
         }

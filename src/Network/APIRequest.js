@@ -3,7 +3,7 @@ import {GET, POST} from './MethodType'
 import {API_URL} from '../../config'
 import APIResponseHelper from './APIResponseHelper'
 import {showLoadingIndicator, hideLoadingIndicator} from '../../redux/actions/LoadingActions'
-//import store from '../../redux/store/ConfigureStore'
+import store from '../../redux/store/ConfigureStore'
  
 export default class APIRequest {
     callAPI = async (apiName, inputParams, showLoading) =>{
@@ -37,7 +37,6 @@ export default class APIRequest {
                 if(showLoading)
                     store.dispatch(hideLoadingIndicator());
                 console.log("[APIRequest.js] error while making API request :: ", error);
-                //store.dispatch(showNotification('Error', 'Uh Oh, Something went wrong.', ' Please try again'))
                 return {status : 500, dataAvailable : false, data : null}
             }    
         }       
