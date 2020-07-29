@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
 import './styles.scss'
@@ -8,9 +9,9 @@ const BasicButton = (props) => {
         emitEvent();
     }
     return(
-        <Button className = "BasicButton" onClick = {submitEvent} data-test="buttonComponent">
+        <button className = "BasicButton"  onClick = {submitEvent} data-test="buttonComponent">
             {buttonText}
-        </Button>
+        </button>
     )
 }
 BasicButton.propTypes = {
