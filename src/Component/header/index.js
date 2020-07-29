@@ -10,7 +10,7 @@ const Header = (props) => {
         emitEvent();
     }
     return(
-        <header  onClick = {submitEvent} data-test="headerComponent">
+        <header data-test="headerComponent">
             <div className = "button" onClick = {submitEvent}>
             {isBack ? <ArrowBack/> : <Menu/>
             }
